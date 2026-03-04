@@ -1,0 +1,77 @@
+@prefix ex:   <https://pikajojo.github.io/Knowledge_Graph_UGent_Lab2/vocab.ttl#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+#################################################################
+# Classes
+#################################################################
+
+ex:Person
+  a rdfs:Class ;
+  rdfs:label "Person"@en ;
+  rdfs:comment "A human person described in this dataset."@en .
+
+#################################################################
+# Datatype Properties (literal values)
+#################################################################
+
+ex:name
+  a rdf:Property ;
+  rdfs:label "name"@en ;
+  rdfs:comment "The full name of a person."@en ;
+  rdfs:domain ex:Person ;
+  rdfs:range xsd:string .
+
+ex:hasHometown
+  a rdf:Property ;
+  rdfs:label "hometown"@en ;
+  rdfs:comment "The hometown of a person (as a text literal)."@en ;
+  rdfs:domain ex:Person ;
+  rdfs:range xsd:string .
+
+ex:hasJobTitle
+  a rdf:Property ;
+  rdfs:label "job title"@en ;
+  rdfs:comment "The job title or role of a person."@en ;
+  rdfs:domain ex:Person ;
+  rdfs:range xsd:string .
+
+ex:hasTelephone
+  a rdf:Property ;
+  rdfs:label "telephone"@en ;
+  rdfs:comment "A telephone number of a person, stored as a string."@en ;
+  rdfs:domain ex:Person ;
+  rdfs:range xsd:string .
+
+ex:hasHobby
+  a rdf:Property ;
+  rdfs:label "hobby"@en ;
+  rdfs:comment "A hobby of a person."@en ;
+  rdfs:domain ex:Person ;
+  rdfs:range xsd:string .
+
+#################################################################
+# Object Properties (IRI/resource values)
+#################################################################
+
+ex:url
+  a rdf:Property ;
+  rdfs:label "url"@en ;
+  rdfs:comment "A link (IRI) to a web resource related to the person (e.g., personal website)."@en ;
+  rdfs:domain ex:Person ;
+  rdfs:range rdfs:Resource .
+
+ex:knows
+  a rdf:Property ;
+  rdfs:label "knows"@en ;
+  rdfs:comment "Indicates that a person knows another person."@en ;
+  rdfs:domain ex:Person ;
+  rdfs:range ex:Person .
+
+ex:beFriendWith
+  a rdf:Property ;
+  rdfs:label "be friend with"@en ;
+  rdfs:comment "Indicates that a person is friends with another person."@en ;
+  rdfs:domain ex:Person ;
+  rdfs:range ex:Person .
