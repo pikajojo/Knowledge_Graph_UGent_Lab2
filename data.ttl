@@ -2,7 +2,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix vocab: <https://pikajojo.github.io/Knowledge_Graph_UGent_Lab2/volab.ttl#> .
-@prefix : <https://pikajojo.github.io/Knowledge_Graph_UGent_Lab2/data.ttl##> .
+@prefix : <https://pikajojo.github.io/Knowledge_Graph_UGent_Lab2/data.ttl#> .
 
 <https://example.org/Yajing> a ex:Person;
                                 ex:name "Yajing Wang"^^xsd:string ;
