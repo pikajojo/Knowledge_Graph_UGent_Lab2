@@ -12,6 +12,17 @@ vocab:Person
   rdfs:label "Person"@en ;
   rdfs:comment "A human person described in this dataset."@en .
 
+
+vocab:Course 
+  a rdfs:Class ;
+    rdfs:label "Course"@en ;
+    rdfs:comment "A course offered at an educational institution." .
+
+vocab:City 
+  a rdfs:Class ;
+    rdfs:label "City"@en ;
+    rdfs:comment "A place in this world with many people living in." .
+
 #################################################################
 # Datatype Properties (literal values)
 #################################################################
@@ -51,6 +62,10 @@ vocab:hasHobby
   rdfs:domain vocab:Person ;
   rdfs:range xsd:string .
 
+
+
+
+
 #################################################################
 # Object Properties (IRI/resource values)
 #################################################################
@@ -61,6 +76,13 @@ vocab:url
   rdfs:comment "A link (IRI) to a web resource related to the person (e.g., personal website)."@en ;
   rdfs:domain vocab:Person ;
   rdfs:range rdfs:Resource .
+
+vocab:enrolledIn 
+    a rdf:Property ;
+    rdfs:label "enrolled in" ;
+    rdfs:comment "Relates a person to a course they are enrolled in." ;
+    rdfs:domain lab:Person ;
+    rdfs:range lab:Course .
 
 vocab:knows
   a rdf:Property ;

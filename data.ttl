@@ -6,10 +6,18 @@
 
 :me a vocab:Person;
     vocab:name "Yajing Wang"^^xsd:string ;
-    vocab:hasHometown "Jinan";
+    vocab:hasHometown ";
     vocab:hasJobTitle "Phd student";
     vocab:url <http://www.pikajojo.github>;
     vocab:hasTelephone "17843108247";
     vocab:hasHobby "Cooking";
     vocab:knows <https://TianTangvanhoecke.github.io/KG_Lab2/data.ttl#me> ;
     vocab:beFriendWith <https://TianTangvanhoecke.github.io/KG_Lab2/data.ttl#me>.
+    vocab:enrolledIn .
+
+    
+:Jinan a vocab:City;
+    vocab:name "Jinan" .
+
+:knowledge-graphs-2025 a vocab:Course ;
+    vocab:name "Knowledge Graphs 2025" ;
