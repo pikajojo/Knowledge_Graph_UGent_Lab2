@@ -4,20 +4,27 @@
 @prefix vocab: <https://pikajojo.github.io/Knowledge_Graph_UGent_Lab2/volab.ttl#> .
 @prefix : <https://pikajojo.github.io/Knowledge_Graph_UGent_Lab2/data.ttl#> .
 
+
+@prefix seppe: <https://seppesantens.github.io/rdf-lab2/data.ttl#> .
+@prefix ward: <https://www.tabulas.eu/ward/profile.ttl#> .
+@prefix thijs: <https://tdhulster.github.io/knowledge-graphs-ugent-2026/profile.ttl#> .
+@prefix marlin: <https://mudoki.github.io/kg-lab2-folio/profile.ttl#> .
+@prefix tian:<https://TianTangvanhoecke.github.io/KG_Lab2/data.ttl#> .
+
 :me a vocab:Person;
     vocab:name "Yajing Wang"^^xsd:string ;
-    vocab:hasHometown ";
+    vocab:hasHometown :Jinan;
     vocab:hasJobTitle "Phd student";
     vocab:url <http://www.pikajojo.github>;
     vocab:hasTelephone "17843108247";
     vocab:hasHobby "Cooking";
-    vocab:knows <https://TianTangvanhoecke.github.io/KG_Lab2/data.ttl#me> ;
-    vocab:beFriendWith <https://TianTangvanhoecke.github.io/KG_Lab2/data.ttl#me>.
-    vocab:enrolledIn .
+    vocab:knows tian:me, seppe:me, ward:me, thijs:me, marlin:me;
+    vocab:beFriendWith tian:me;
+    vocab:enrolledIn :knowledge-graphs-2025.
 
-    
+
 :Jinan a vocab:City;
     vocab:name "Jinan" .
 
 :knowledge-graphs-2025 a vocab:Course ;
-    vocab:name "Knowledge Graphs 2025" ;
+    vocab:name "Knowledge Graphs 2025" .
