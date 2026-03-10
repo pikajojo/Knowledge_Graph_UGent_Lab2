@@ -10,7 +10,7 @@
 @prefix thijs: <https://tdhulster.github.io/knowledge-graphs-ugent-2026/profile.ttl#> .
 @prefix marlin: <https://mudoki.github.io/kg-lab2-folio/profile.ttl#> .
 @prefix tian:<https://TianTangvanhoecke.github.io/KG_Lab2/data.ttl#> .
-@prefix odm:<https://raw.githubusercontent.com/olivierdm/itsme/main/profile.ttl#>
+@prefix odm:<https://raw.githubusercontent.com/olivierdm/itsme/main/profile.ttl#> .
 
 :me a vocab:Person;
     vocab:name "Yajing Wang"^^xsd:string ;
