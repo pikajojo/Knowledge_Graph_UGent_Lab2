@@ -3,9 +3,8 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
 
-#################################################################
+
 # Classes
-#################################################################
 
 vocab:Person
   a rdfs:Class ;
@@ -23,9 +22,8 @@ vocab:City
     rdfs:label "City"@en ;
     rdfs:comment "A place in this world with many people living in." .
 
-#################################################################
+
 # Datatype Properties (literal values)
-#################################################################
 
 vocab:name
   a rdf:Property ;
@@ -66,9 +64,8 @@ vocab:hasHobby
 
 
 
-#################################################################
+
 # Object Properties (IRI/resource values)
-#################################################################
 
 vocab:url
   a rdf:Property ;

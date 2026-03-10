@@ -1,0 +1,11 @@
+PREFIX : <https://pikajojo.github.io/Knowledge_Graph_UGent_Lab2/data.ttl#>
+PREFIX v: <https://pikajojo.github.io/Knowledge_Graph_UGent_Lab2/volab.ttl#>
+PREFIX lab: <https://seppesantens.github.io/rdf-lab2/vocab.ttl#>
+
+SELECT ?person
+WHERE {
+  :me v:knows ?person .
+  ?person (v:enrolledIn | lab:enrolledIn) ?course .
+  
+  FILTER(CONTAINS(STR(?course),"knowledge-graphs"))
+}
