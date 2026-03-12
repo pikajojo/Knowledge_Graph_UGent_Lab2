@@ -3,8 +3,8 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix vocab: <https://pikajojo.github.io/Knowledge_Graph_UGent_Lab2/vocab.ttl#> .
 @prefix : <https://pikajojo.github.io/Knowledge_Graph_UGent_Lab2/data.ttl#> .
-@prefix foaf: <http://xmlns.com/foaf/0.1/>
-@prefix schema: <https://schema.org/>
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix schema: <https://schema.org/> .
 
 
 
