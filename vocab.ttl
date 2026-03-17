@@ -2,6 +2,7 @@
 @prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
 
 
 # Classes
@@ -10,6 +11,7 @@ vocab:Person
   a rdfs:Class ;
   rdfs:label "Person"@en ;
   rdfs:comment "A human person described in this dataset."@en .
+  rdfs:subClassOf foaf:Person .
 
 
 vocab:Course 
@@ -22,6 +24,26 @@ vocab:City
     rdfs:label "City"@en ;
     rdfs:comment "A place in this world with many people living in." .
 
+vocab:Photo
+  a rdfs:Class ;
+  rdfs:label "Photo"@en ;
+  rdfs:comment "which includes a person or sth." .
+  rdfs:subClassOf foaf:Image .
+
+vocab:Cat
+  a rdfs:Class ;
+  rdfs:label "Cat"@en ;
+  rdfs:comment "the cutest animal in the world." .
+
+ 
+vocab:Poster
+  a rdfs:Class ;
+  rdfs:label "Poster"@en ;
+  rdfs:comment "sth with some words or images." .
+
+
+
+
 
 # Datatype Properties (literal values)
 
@@ -31,6 +53,7 @@ vocab:name
   rdfs:comment "The full name of a person."@en ;
   rdfs:domain vocab:Person ;
   rdfs:range xsd:string .
+  rdfs:subPropertyOf foaf:name .
 
 vocab:hasHometown
   a rdf:Property ;
@@ -60,7 +83,21 @@ vocab:hasHobby
   rdfs:domain vocab:Person ;
   rdfs:range xsd:string .
 
+vocab:hasPhotoName
+  a rdf:Property ;
+  rdfs:label "photo name"@en ;
+  rdfs:comment "A name of a photo."@en ;
+  rdfs:domain vocab:Photo ;
+  rdfs:range xsd:string .
+  rdfs:subPropertyOf foaf:name .
 
+
+vocab:hasDescription
+  a rdf:Property ;
+  rdfs:label "description"@en ;
+  rdfs:comment "A description of the photo."@en ;
+  rdfs:domain vocab:Photo ;
+  rdfs:range xsd:string .
 
 
 
@@ -87,6 +124,7 @@ vocab:knows
   rdfs:comment "Indicates that a person knows another person."@en ;
   rdfs:domain vocab:Person ;
   rdfs:range vocab:Person .
+  rdfs:subPropertyOf foaf:knows .
 
 vocab:beFriendWith
   a rdf:Property ;
@@ -94,3 +132,38 @@ vocab:beFriendWith
   rdfs:comment "Indicates that a person is friends with another person."@en ;
   rdfs:domain vocab:Person ;
   rdfs:range vocab:Person .
+
+vocab:hasCreator
+  a rdf:Property ;
+  rdfs:label "creator name"@en ;
+  rdfs:comment "A name of a photo creator."@en ;
+  rdfs:domain vocab:Photo ;
+  rdfs:range vocab:Person .
+  rdfs:subPropertyOf foaf:maker .
+
+
+vocab:hasDepicted
+  a rdf:Property ;
+  rdfs:label "person name"@en ;
+  rdfs:comment "A name of person who is in the photo."@en ;
+  rdfs:domain vocab:Photo ;
+  rdfs:range vocab:Person .
+  rdfs:subPropertyOf foaf:depicts .
+
+vocab:hasBeenTakenAt
+  a rdf:Property ;
+  rdfs:label "location name"@en ;
+  rdfs:comment "A name of location where the photo is taken."@en ;
+  rdfs:domain vocab:Photo ;
+  rdfs:range vocab:Place .
+
+vocab:hasUrl
+  a rdf:Property ;
+  rdfs:label "photo link"@en ;
+  rdfs:comment "where you can see the photo on the internet."@en ;
+  rdfs:domain vocab:Photo ;
+  rdfs:range rdfs:Resource .
+
+
+
+

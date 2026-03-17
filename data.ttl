@@ -28,9 +28,62 @@
     vocab:beFriendWith tian:me;
     vocab:enrolledIn :knowledge-graphs-2025.
 
+:cat a vocab:Cat;
+
 
 :Jinan a vocab:City;
     vocab:name "Jinan" .
 
+:Athen a vocab:City;
+    vocab:name "Athen" .
+
+:London a vocab:City;
+    vocab:name "London" .
+
+:Brussels a vocab:City;
+    vocab:name "Brussels" .
+
+:SomewhereInTheWorld a vocab:City;
+    vocab:name "as you can see" .
+
 :knowledge-graphs-2025 a vocab:Course ;
     vocab:name "Knowledge Graphs 2025" .
+
+:Alain a vocab:Person;
+    vocab:name "Alain Renson"^^xsd:string .
+
+:Yue a vocab:Person;
+    vocab:name "Mingyue Huang"^^xsd:string .
+
+:myPhoto a vocab:Photo;
+    vocab:hasPhotoName "meInGreece";
+    vocab:hasDescription "myself standing at a park in Athen";
+    vocab:hasCreator :Alain;
+    vocab:hasDepicted :me;
+    vocab:hasBeenTakenAt :Athen ;
+    vocab:hasUrl <https://pikajojo.github.io/images/yajing_pic_20250415.jpeg> .
+
+:ceremonyPhoto a vocab:Photo;
+    vocab:hasPhotoName "meAtGraduationCeremony";
+    vocab:hasDescription "myself at the graduation ceremony at VUB";
+    vocab:hasCreator :Alain;
+    vocab:hasDepicted :me;
+    vocab:hasBeenTakenAt :Brussels ;
+    vocab:hasUrl <https://pikajojo.github.io/images/yajing_graduation.jpeg> .
+
+:posterPhoto a vocab:Photo;
+    vocab:hasPhotoName "poster";
+    vocab:hasDescription "poster photo for the short film Hypnos";
+    vocab:hasCreator :Yue;
+    vocab:hasDepicted :me;
+    vocab:hasBeenTakenAt :Brussels ;
+    vocab:hasUrl <https://pikajojo.github.io/images/yajing_poster.jpeg> .
+
+
+
+
+
+
+
+
+
