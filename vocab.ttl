@@ -10,7 +10,7 @@
 vocab:Person
   a rdfs:Class ;
   rdfs:label "Person"@en ;
-  rdfs:comment "A human person described in this dataset."@en .
+  rdfs:comment "A human person described in this dataset."@en ;
   rdfs:subClassOf foaf:Person .
 
 
@@ -27,7 +27,7 @@ vocab:City
 vocab:Photo
   a rdfs:Class ;
   rdfs:label "Photo"@en ;
-  rdfs:comment "which includes a person or sth." .
+  rdfs:comment "which includes a person or sth." ;
   rdfs:subClassOf foaf:Image .
 
 vocab:Cat
@@ -52,7 +52,7 @@ vocab:name
   rdfs:label "name"@en ;
   rdfs:comment "The full name of a person."@en ;
   rdfs:domain vocab:Person ;
-  rdfs:range xsd:string .
+  rdfs:range xsd:string ;
   rdfs:subPropertyOf foaf:name .
 
 vocab:hasHometown
@@ -88,7 +88,7 @@ vocab:hasPhotoName
   rdfs:label "photo name"@en ;
   rdfs:comment "A name of a photo."@en ;
   rdfs:domain vocab:Photo ;
-  rdfs:range xsd:string .
+  rdfs:range xsd:string ;
   rdfs:subPropertyOf foaf:name .
 
 
@@ -123,7 +123,7 @@ vocab:knows
   rdfs:label "knows"@en ;
   rdfs:comment "Indicates that a person knows another person."@en ;
   rdfs:domain vocab:Person ;
-  rdfs:range vocab:Person .
+  rdfs:range vocab:Person ;
   rdfs:subPropertyOf foaf:knows .
 
 vocab:beFriendWith
@@ -138,7 +138,7 @@ vocab:hasCreator
   rdfs:label "creator name"@en ;
   rdfs:comment "A name of a photo creator."@en ;
   rdfs:domain vocab:Photo ;
-  rdfs:range vocab:Person .
+  rdfs:range vocab:Person ;
   rdfs:subPropertyOf foaf:maker .
 
 
@@ -147,7 +147,7 @@ vocab:hasDepicted
   rdfs:label "person name"@en ;
   rdfs:comment "A name of person who is in the photo."@en ;
   rdfs:domain vocab:Photo ;
-  rdfs:range vocab:Person .
+  rdfs:range vocab:Person ;
   rdfs:subPropertyOf foaf:depicts .
 
 vocab:hasBeenTakenAt
