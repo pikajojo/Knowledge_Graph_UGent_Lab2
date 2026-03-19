@@ -26,7 +26,7 @@
     vocab:beFriendWith tian:me;
     vocab:enrolledIn :knowledge-graphs-2025.
 
-:cat a vocab:Cat;
+
 
 
 :Jinan a vocab:City;
